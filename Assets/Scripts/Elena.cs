@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+using UnityEngine;
+
+public class Elena : Character
+{
+
+    void Start()
+    {
+        // Elena'nın başlangıç sağlık değerlerini ayarla
+        maxHealth = 100;
+        currentHealth = maxHealth;
+        healthBar.SetHealth(maxHealth);
+    }
+
+    void Update()
+    {
+        healthBar.SetHealth(currentHealth);
+        
+    }
+
+=======
+>>>>>>> eedac35ae4cde0ba29a2ef6255ebf5fa8ca533b0
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +33,12 @@ public class Elena : MonoBehaviour  //Character
     public int strength = 10;
 
     public HealthBar healthBar;
+<<<<<<< HEAD
 
     public bool isDead = false;
+=======
+    public Animator animator;
+>>>>>>> eedac35ae4cde0ba29a2ef6255ebf5fa8ca533b0
 
     // Start is called before the first frame update
     void Start()
@@ -58,10 +86,14 @@ public class Elena : MonoBehaviour  //Character
 
     private void Die()
     {
+<<<<<<< HEAD
         // Implement character death logic here
 
         isDead = true;
         
+=======
+        animator.SetTrigger("Die");
+>>>>>>> eedac35ae4cde0ba29a2ef6255ebf5fa8ca533b0
     }
 
     public void Attack(Enemy enemy)
@@ -69,4 +101,8 @@ public class Elena : MonoBehaviour  //Character
         int damage = strength; // You can add more complex calculations
         enemy.TakeDamage(damage);
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 8fa05a96e1c9a7c347317930b8d92fead6ddf7a5
+>>>>>>> eedac35ae4cde0ba29a2ef6255ebf5fa8ca533b0
 }
